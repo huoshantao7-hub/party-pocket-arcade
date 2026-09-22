@@ -1,0 +1,16 @@
+{
+  "name": "party-pocket-video-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Optional deterministic gameplay video capture tools",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "audit": "node audit-games.mjs",
+    "preview": "node preview-server.mjs",
+    "render": "node render.mjs",
+    "smoke": "node render.mjs --smoke --game=jelly"
+  },
+  "dependencies": { "playwright": "1.62.1" }
+}

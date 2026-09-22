@@ -1,0 +1,90 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "content": "Original game-engine bot demonstration; real rule-based scores, not human online play or a model benchmark.",
+  "videos": [
+    {
+      "id": "compilation",
+      "asset": "party-pocket-showcase.mp4",
+      "duration_seconds": 90.021354,
+      "frames": 2700,
+      "width": 1600,
+      "height": 1080,
+      "fps": 30,
+      "bytes": 10494216,
+      "sha256": "8477a18d54a88782ccdc65bfacdbe6768932274732f35680955d41e7bcbc7548"
+    },
+    {
+      "id": "jelly",
+      "asset": "jelly-rumble.mp4",
+      "duration_seconds": 62.033333,
+      "frames": 1861,
+      "width": 1600,
+      "height": 1080,
+      "fps": 30,
+      "bytes": 10862563,
+      "sha256": "e064a73ef5d8e63ba0081d2cf339100517f87c1cae2020e2d505c1484bf7339e",
+      "game_source_sha256_lf": "aefbf58ebee42fcac96aa5ace10a823f45ab344e8904ec92ed218a804642c12e"
+    },
+    {
+      "id": "kitchen",
+      "asset": "midnight-kitchen.mp4",
+      "duration_seconds": 77.0,
+      "frames": 2310,
+      "width": 1600,
+      "height": 1080,
+      "fps": 30,
+      "bytes": 5601068,
+      "sha256": "51a9360b4bf0f12d303b586836fac7784616968d9ee08285706139270ec252c6",
+      "game_source_sha256_lf": "241047be52979cd8a3566abecc6a4ae13fec9a766db2b9262067d79af1192efb"
+    },
+    {
+      "id": "bubble",
+      "asset": "bubble-panic.mp4",
+      "duration_seconds": 77.033333,
+      "frames": 2311,
+      "width": 1600,
+      "height": 1080,
+      "fps": 30,
+      "bytes": 9571603,
+      "sha256": "925f24b8fd5a6c61a6e540502f626819c34161393211208bdbc62d7a8d9e4ade",
+      "game_source_sha256_lf": "583dc2df8d50cac469632fd22932a0022a269043f5feeb37549666947b4ea5bb"
+    },
+    {
+      "id": "magnet",
+      "asset": "magnet-mates.mp4",
+      "duration_seconds": 77.0,
+      "frames": 2310,
+      "width": 1600,
+      "height": 1080,
+      "fps": 30,
+      "bytes": 10652084,
+      "sha256": "1cf73ebf388ce5f6bd7c0e1fb2b3c2f64dba79490d19d7dde4f9b3c478b3ee38",
+      "game_source_sha256_lf": "d12b1310ca78f22a736a5a69aaa577915a4a1ab9c52ad19498c86dab598aba04"
+    },
+    {
+      "id": "hockey",
+      "asset": "neon-hockey.mp4",
+      "duration_seconds": 62.033333,
+      "frames": 1861,
+      "width": 1600,
+      "height": 1080,
+      "fps": 30,
+      "bytes": 9277281,
+      "sha256": "9cee29f81768e01ee9f7e11bae915952dd5fbb31afee4393f8e8963372a8821c",
+      "game_source_sha256_lf": "19302a3c884a0d559090be07445e8c1c96944d4c468531e503fa60ca58fbd4d2"
+    },
+    {
+      "id": "racer",
+      "asset": "pocket-rally.mp4",
+      "duration_seconds": 47.433333,
+      "frames": 1423,
+      "width": 1600,
+      "height": 1080,
+      "fps": 30,
+      "bytes": 3951945,
+      "sha256": "c013162cce4623c4a4c9b7072d5996575ddfc154776af31567c3262e2f20a2df",
+      "game_source_sha256_lf": "103b6afe089ae106d5499194dda7d129b164f3497e6ff3c25c71ab0d39b3fede"
+    }
+  ]
+}

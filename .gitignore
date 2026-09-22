@@ -35,3 +35,6 @@ media/
 *.zip
 *.log
 *.tmp
+
+# Optional video-tool generated output
+tools/video/output/

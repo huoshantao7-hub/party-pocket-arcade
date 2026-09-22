@@ -4,6 +4,12 @@
 
 ![街机口袋六款游戏封面](assets/cover.jpg)
 
+## 演示视频
+
+[观看 90 秒合集](https://github.com/huoshantao7-hub/party-pocket-arcade/releases/download/v1.0.0/party-pocket-showcase.mp4) · [下载全部 7 个 MP4](https://github.com/huoshantao7-hub/party-pocket-arcade/releases/tag/v1.0.0) · [单款视频与录制说明](docs/videos.md)
+
+连续真实游戏运行，保留机器人演示标注、实时分数与原创同步音效。单款约 47–77 秒。
+
 ## 六种朋友局
 
 | 游戏 | 类型 | 每局上限 | 互动亮点 | 说明 / 提示词 |
@@ -113,3 +119,8 @@ P1: **WASD + F/G**. P2: **arrow keys + K/L**. Play locally with a friend, a rule
 代码、美术与游戏角色为本项目原创实现，玩法取自常见街机类型；不含原作素材，也不宣称实时热门排名或真实在线人数。参考方向包括[多人协作](https://store.steampowered.com/app/3527290/PEAK/)与[复古竞速](https://www.nintendo.com/us/store/products/f-zero-99-switch/)。
 
 [MIT License](LICENSE) · Copyright © 2026 huoshantao7-hub
+
+
+## 可选视频生成工具
+
+[tools/video 使用指南](tools/video/README.md) 提供可移机的真实游戏录像、原创合成音效和合集脚本。依赖只安装在视频工具目录，游戏本体仍为零依赖；全部生成物写入被忽略的 `tools/video/output/`。
