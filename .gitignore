@@ -1,0 +1,37 @@
+# Dependencies, coverage and caches
+node_modules/
+coverage/
+.cache/
+cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Private configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+auth.json
+cookies*.json
+
+# Local QA and production artifacts
+qa/
+requirements-ledger.md
+qa-*.mjs
+frames/
+draft-frames/
+renders/
+media/
+*.mp4
+*.mov
+*.webm
+*.wav
+*.zip
+*.log
+*.tmp

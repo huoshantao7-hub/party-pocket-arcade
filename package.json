@@ -1,0 +1,13 @@
+{
+  "name": "party-pocket-arcade",
+  "version": "1.0.0",
+  "description": "Six original local multiplayer browser mini-games built with JavaScript and Canvas.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test"
+  }
+}
