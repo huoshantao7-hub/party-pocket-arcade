@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f2e9"><title>云顶快递 · 横版跳跃冒险</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head>
+<body>
+<a class="skip-link" href="#game-area">跳到游戏</a>
+<header class="header wrap"><a class="brand" href="./"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="12" fill="#193f35"/><path d="M10 23h21a6 6 0 0 0-6-9 8 8 0 0 0-15 3 3 3 0 0 0 0 6" fill="#f8eed1"/><path d="m16 27 4-9h5l-4 9" fill="#e77542"/></svg><span>云顶快递<small>CLOUD COURIER</small></span></a><div class="header-note"><span class="status-dot"></span>本地运行 · 即刻开玩</div><a class="source" href="https://github.com/NandhaKishorM/laya" target="_blank" rel="noopener">Laya 源码 <span aria-hidden="true">↗</span></a></header>
+<main class="wrap">
+<section class="intro"><div><div class="eyebrow">POCKET ADVENTURE / VOL. 01</div><h1>小个子，<span>大冒险。</span></h1><p>跳过山谷，踩扁小怪。把下一份快乐，送到云端。</p></div><div class="edition"><span>03</span><div>座浮岛<br><b>等你抵达</b></div></div></section>
+<div class="game-layout">
+<section id="game-area" class="game-area" aria-label="横版闯关游戏">
+<div class="game-top"><div class="world-mark"><i></i><b id="world-title">01 / 云间草原</b></div><div class="game-top-right"><span id="mode-badge">手动闯关</span><button id="sound" class="small-btn" aria-pressed="false">声音 关</button><button id="fullscreen" class="small-btn" aria-label="游戏全屏">全屏 ↗</button></div></div>
+<div class="viewport" id="viewport"><canvas id="game" width="960" height="540" tabindex="0" aria-label="横版闯关画面，方向键移动，空格跳跃，Shift加速">需要支持 Canvas 的浏览器。</canvas>
+<div id="overlay" class="overlay"><div class="overlay-card"><div class="stamp" id="overlay-kicker">READY FOR TAKEOFF</div><h2 id="overlay-title">今天，往高处走。</h2><p id="overlay-copy">方向键移动 · 空格跳跃<br>长按跳得更高，Shift 加速。</p><button id="start" class="primary">开始冒险 <span aria-hidden="true">→</span></button></div></div>
+<div class="hud" aria-hidden="true"><div><span class="hud-label">投递员</span><b id="hearts">♥ ♥ ♥</b></div><div><span class="hud-label">金币</span><b class="gold" id="coins">000</b></div><div><span class="hud-label">得分</span><b id="score">00000</b></div><div class="hud-time"><span class="hud-label">用时</span><b id="clock">00:00</b></div></div>
+</div>
+<div class="game-bottom"><span id="game-message" role="status" aria-live="polite">准备好，第一站就在云层上面。</span><div><button id="pause" disabled>暂停</button><button id="restart">重开</button></div></div>
+<div class="touch-controls" aria-label="触控游戏手柄"><div><button data-input="left" aria-label="向左移动">←</button><button data-input="right" aria-label="向右移动">→</button></div><div><button data-input="run" class="run">加速</button><button data-input="jump" class="jump">跳跃 ↑</button></div></div>
+<div class="level-strip" aria-label="选择关卡"><button data-level="0" class="active" aria-pressed="true"><span>01</span><div><b>晴空邮路</b><small>第一跃，轻轻落地</small></div></button><button data-level="1" aria-pressed="false"><span>02</span><div><b>落日汽水厂</b><small>在晚风里，多跳一步</small></div></button><button data-level="2" aria-pressed="false"><span>03</span><div><b>星灯云港</b><small>把勇气送到最远处</small></div></button></div>
+</section>
+<aside class="side-panel"><section class="control-card"><div class="eyebrow">YOUR ADVENTURE</div><h2>这次，谁来闯关？</h2><label for="mode">操控方式</label><select id="mode"><option value="human">我来玩 · 手动闯关</option><option value="bot">看演示 · 规则机器人</option><option value="laya">Laya · 实验性本地控制</option></select><p id="mode-help">方向、起跳和节奏，都由你掌握。</p><div class="key-row"><kbd>←</kbd><kbd>→</kbd><span>移动</span></div><div class="key-row"><kbd>空格</kbd><span>跳跃 / 长按跳得更高</span></div><div class="key-row"><kbd>Shift</kbd><span>加速</span><kbd>P</kbd><span>暂停</span></div><div class="divider"></div><div class="objective"><span>你的任务</span><b>抵达每座岛屿的邮局。</b><p>从上方踩敌人；顶起问号砖找金币。点亮中途旗帜，失误后从那里继续。</p></div></section>
+<section class="ai-card"><div class="ai-heading"><div><span class="eyebrow">ON-DEVICE</span><h2>Laya 决策引擎</h2></div><span class="chip">LOCAL</span></div><p id="ai-status" role="status">正在检查本地模型…</p><button id="load-ai" class="secondary">加载本地 Laya</button><div class="metrics"><div><span>本次推理</span><b id="latency">—<small> ms</small></b></div><div><span>已执行决策</span><b id="decision-count">0</b></div></div><div class="decision"><span>最近动作</span><b id="decision-action">等待开局</b></div><div class="confidence"><i id="confidence-bar"></i></div><p class="ai-note" id="ai-note">本地模型真实输出。演示模式使用规则机器人，二者分别标注。</p></section>
+</aside></div>
+<footer><span>为跳跃留一点时间。</span><span>原创关卡与绘制角色 · 超级玛丽式平台玩法 · Laya typed decisions</span></footer>
+<p class="sr-only" id="accessible-state" aria-live="off"></p>
+</main><script type="module" src="app.js"></script></body></html>

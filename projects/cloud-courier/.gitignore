@@ -1,0 +1,9 @@
+.venv/
+.local/
+__pycache__/
+*.pyc
+qa/
+*.zip
+.env
+.env.*
+node_modules/

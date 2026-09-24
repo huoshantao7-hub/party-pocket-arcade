@@ -22,3 +22,16 @@ jobs:
           node-version: ${{ matrix.node }}
       - name: Run portable game and room tests
         run: node --test tests/*.test.mjs
+      - name: Run both standalone game engines
+        run: |
+          node --test projects/cloud-courier/tests/*.test.mjs
+          node --test projects/sunset-range/tests/*.test.mjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run both local server boundary suites
+        run: |
+          cd projects/cloud-courier
+          python -B -m unittest discover -s tests -p test_server.py -v
+          cd ../sunset-range
+          python -B -m unittest discover -s tests -p test_server.py -v

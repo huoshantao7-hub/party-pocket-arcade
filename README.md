@@ -27,6 +27,16 @@
 | **磁力双星** | **霓虹气垫球** | **微缩拉力赛** |
 | ![磁力双星](assets/magnet.jpg) | ![霓虹气垫球](assets/hockey.jpg) | ![微缩拉力赛](assets/racer.jpg) |
 
+## 另外两款独立游戏
+
+这两款各有自己的本地服务和测试，不属于上方六款朋友局大厅；下载仓库后可以分别启动。
+
+| 游戏 | 玩法 | 源码与制作提示词 | 启动 |
+| --- | --- | --- | --- |
+| 云顶快递 | 三关横版闯关：跳跃、顶砖、踩怪、金币、检查点；键盘和触控 | [项目目录](projects/cloud-courier/) · [制作提示词](projects/cloud-courier/制作提示词.md) | `python -B projects/cloud-courier/launch.py`，打开 `127.0.0.1:8785` |
+| 落日靶场 | 移动靶、连击、换弹、限时挑战与同机双人轮流对决 | [项目目录](projects/sunset-range/) · [制作提示词](projects/sunset-range/制作提示词.md) | `python -B projects/sunset-range/launch.py`，打开 `127.0.0.1:8786` |
+
+均需 Python 3.10+；普通游玩不用安装第三方 Python 包。云顶快递的 Laya 模式需自行配置上游源码和模型权重，当前属于实验功能，**没有证明模型能通关**。落日靶场的双人对决是同一设备轮流玩，不是联网对战。
 ## 一分钟开始
 
 需要 **Node.js 20 或更新版本**，无需 `npm install`。下载或克隆本仓库，进入目录运行：

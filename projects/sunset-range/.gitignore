@@ -1,0 +1,6 @@
+qa/
+__pycache__/
+*.pyc
+*.zip
+.env
+node_modules/

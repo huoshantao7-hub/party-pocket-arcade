@@ -1,0 +1,5 @@
+export class Sound {
+ constructor(){this.enabled=false;this.ctx=null;this.last=new Map()}
+ async toggle(){if(!this.ctx)this.ctx=new(window.AudioContext||window.webkitAudioContext)();await this.ctx.resume();this.enabled=!this.enabled;return this.enabled}
+ play(type){if(!this.enabled||!this.ctx)return;const at=this.ctx.currentTime;if(at-(this.last.get(type)||-100)<.06)return;this.last.set(type,at);const specs={jump:[260,580,.12],coin:[890,1480,.14],block:[490,750,.09],stomp:[200,70,.13],hurt:[160,60,.2],death:[220,65,.35],checkpoint:[660,990,.3],win:[523,1046,.45]};const [a,b,d]=specs[type]||[260,150,.08];const osc=this.ctx.createOscillator(),gain=this.ctx.createGain();osc.type=type==='coin'||type==='win'?'sine':'triangle';osc.frequency.setValueAtTime(a,at);osc.frequency.exponentialRampToValueAtTime(b,at+d);gain.gain.setValueAtTime(.0001,at);gain.gain.exponentialRampToValueAtTime(.11,at+.008);gain.gain.exponentialRampToValueAtTime(.0001,at+d);osc.connect(gain);gain.connect(this.ctx.destination);osc.start(at);osc.stop(at+d+.02)}
+}
