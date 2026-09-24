@@ -91,6 +91,8 @@ python build-docs.py
 
 提示词用于重新生成同类作品，不保证新的实现逐像素一致；复现本版本请使用仓库源码。
 
+[下一款游戏的玩法与手感制作检查表](docs/game-development-workflow.md)
+
 ## 测试与结构
 
 ```sh
